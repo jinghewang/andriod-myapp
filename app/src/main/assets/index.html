@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chatset="utf-8" />
+    <title>This is a test</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        a{
+        display: block;
+        width: 100px;
+        padding: 1em;
+        margin: 0 auto;
+        font-size: 1em;
+        color: #FFF;
+        background-color: highlight;
+        text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<a href="#">js中调用本地方法</a>
+<a href="myapp://hbdworld.com.cn?arg0=0&arg1=1&name=wjh&age=36" target="_self" id="myapp">打开myapp</a><br/>
+<a href="taobao://m.taobao.com" target="_self" id="taobao">连接到淘宝</a>
+<a href="taobaotravel://h5_homepage" target="_self" id="trip">连接到旅行</a>
+<script>
+
+    var ua = navigator.userAgent;
+    if(ua.match(/iPhone|iPod/i) != null){
+        //iphone代码
+        //alert('iphone');
+    }
+    else if(ua.match(/Android/i) != null){
+        //android代码
+        //alert('andriod');
+    }
+    else if(ua.match(/iPad/i) != null){
+        //ipad代码
+        //alert('ipad');
+    }
+</script>
+<p></p>
+</body>
+</html>
