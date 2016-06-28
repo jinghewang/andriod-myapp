@@ -29,6 +29,28 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("key:" + "scheme" + "   value:" + scheme);
             layout.addView(textView);
 
+            textView = new TextView(this);
+            textView.setText("key:" + "host" + "   value:" + uri.getHost());
+            layout.addView(textView);
+
+            textView = new TextView(this);
+            textView.setText("key:" + "path" + "   value:" + uri.getPath());
+            layout.addView(textView);
+
+            String path = uri.getPath();
+            if (path.length() >0){
+                if (path.equals("/dept")) {
+                    Intent intent1 = new Intent(MainActivity.this, DeptActivity.class);
+                    startActivity(intent1);
+                } else if (path.equals("/user")) {
+                    Intent intent1 = new Intent(MainActivity.this, UserActivity.class);
+                    startActivity(intent1);
+                } else {
+
+                }
+            }
+
+
             Set<String> sets = uri.getQueryParameterNames();
             for (String set : sets) {
                 textView = new TextView(this);
